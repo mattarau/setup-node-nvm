@@ -1,4 +1,10 @@
 #!/bin/bash
+
+if command -v nvm &> /dev/null; then
+    echo nvm is already installed. 1>&2
+    exit 0
+fi
+
 set -e
 export NVM_DIR="$HOME/mynvm"
 export NVM_NODEJS_ORG_MIRROR="$2"
